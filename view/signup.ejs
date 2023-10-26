@@ -11,7 +11,7 @@
     <!-- Bootstrap CDN  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <title>Register</title>
+    <title>Registrar</title>
     <style>
         body {
             font-family: 'Recursive', sans-serif;
@@ -136,7 +136,7 @@
 
 
     <div class="container">
-        <h1 class="text-center p-3">Register</h1>
+        <h1 class="text-center p-3">Registrar</h1>
         <div style="margin: 0 auto;" class="col-12 col-md-6 col-lg-5 p-5 customborder">
 
             <% if(typeof err !='undefined' ){ %>
@@ -166,33 +166,33 @@
                     <form action="/signup" method="POST">
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                         <div class="mb-3">
-                            <label for="email">Enter Your Email</label>
+                            <label for="email">Digite seu email</label>
                             <input type="email" class="form-control form-control-lg" name="email" id="email"
                                 autocomplete="off" placeholder="Email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="username">Choose A Username</label>
+                            <label for="username">Crie um nome de usuário</label>
                             <input type="text" class="form-control form-control-lg" name="username" id="username"
                                 autocomplete="off" placeholder="Username" required>
                         </div>
                         <div class="mb-3">
-                            <label for="password">Choose A Password</label>
+                            <label for="password">Crie uma senha</label>
                             <input type="password" class="form-control form-control-lg" name="password" id="password"
                             autocomplete="off" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onkeyup='check();' required>
                         </div>
                         <div class="mb-3">
-                            <label for="confirmpassword">Confirm Your Password</label>
+                            <label for="confirmpassword">Confirme a senha criada</label>
                             <input type="password" class="form-control form-control-lg" name="confirmpassword"
                                 id="confirmpassword" autocomplete="off" placeholder="Confirm Password"  onkeyup='check();' required>
                         </div>
                         <div id="message">
-                          <p id="letter" class="invalid"><b>lowercase</b></p>
-                          <p id="capital" class="invalid"><b>capital (uppercase)</b></p>
-                          <p id="number" class="invalid"><b>number</b></p>
-                          <p id="length" class="invalid"><b>8 characters</b></p>
+                          <p id="letter" class="invalid"><b>Minúsculas</b></p>
+                          <p id="capital" class="invalid"><b>Maiúsculas</b></p>
+                          <p id="number" class="invalid"><b>Números</b></p>
+                          <p id="length" class="invalid"><b>8+ Caracteres</b></p>
                         </div>
                         <div id="messageconfirmpassword">
-                          <p id="samepw" class="invalid"><b>Password Same</b></p>
+                          <p id="samepw" class="invalid"><b>Senhas</b></p>
                         </div>
                         <div class="mb-3"> 
                             <center> <%- recaptcha %> </center>
@@ -201,7 +201,7 @@
                             <input type="submit" class="btn btn-lg btn-outline-primary" value="Register">
                
                         </div>
-                        <p>Already Registered ? <a class="card-link" href="/login">LOGIN Here</a> </p>
+                        <p>Você já tem uma conta? <a class="card-link" href="/login">Faça login aqui</a> </p>
                     </form>
         </div>
     </div>

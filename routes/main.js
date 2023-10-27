@@ -1,18 +1,5 @@
 __path = process.cwd()
 
-//_______________________ ┏  Info  ┓ _______________________\\
-//
-//   Credit : AlipBot
-//   
-//   Note 
-//   Jangan Jual SC ini ,
-//   Jangan Buang Text ini,
-//   Siapa Mahu Upload Jangan Lupa Credit :),
-//   Siapa Tidak Letak Credit Akan Ambil Tindakan
-//   
-//_______________________ ┏ Make By AlipBot ┓ _______________________\\
-
-//―――――――――――――――――――――――――――――――――――――――――― ┏  Modules ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
 require('../settings');
 const express = require('express');
@@ -24,14 +11,14 @@ const apiRoutes = require('./api')
 const dataweb = require('../model/DataWeb');
 const User = require('../model/user');
 
-//_______________________ ┏ Function ┓ _______________________\\
+//_______________________   Funções   _______________________\\
 
 function checkAuth(req, res, next) {
     if (req.isAuthenticated()) {
         res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, post-check=0, pre-check=0');
         next();
     } else {
-        req.flash('error_messages', "Please Login to continue !");
+        req.flash('error_messages', "Faça login para continuar.");
         res.redirect('/login');
     }
 }
@@ -43,7 +30,7 @@ async function getApikey(id) {
 }
 
 
-//_______________________ ┏ Router ┓ _______________________\\
+//_______________________   Rotas   _______________________\\
 
 router.get('/', (req, res) => {
         res.render("home");

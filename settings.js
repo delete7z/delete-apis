@@ -39,54 +39,54 @@ loghandler = {
     error: {
         status: false,
         code: 503,
-        message: '[!] Service Unavaible Or Error',
+        message: 'Serviço indisponível no momento.',
         maintanied_by: `${creator}`
     },
     noturl: {
     	status: false,
     	code: 403,
-    	message: '[!] Forbiden or Error, Invlid url',
+    	message: 'Acesso negado, ou a url é inválida.',
     	maintanied_by: `${creator}`
     },
     notfound: {
     	status: false,
     	code: 404,
-    	message: '[!] Forbiden or Error, Not Found',
+    	message: 'Acesso negado, ou não foi encontrado nada como resultado.',
     	maintanied_by: `${creator}`
     },
     notid: {
     	status: false,
     	code: 404,
-    	message: '[!] Forbiden or Error, Invalid Id or Zone',
+    	message: 'Acesso negado, ou seu id é inválido.',
     	maintanied_by: `${creator}`
     },
     redy: {
     	status: false,
     	code: 403,
-    	message: '[!] Forbiden or Error, Alias ​​already in use',
+    	message: 'Acesso negado, ou este serviço já está em uso.',
     	maintanied_by: `${creator}`
     },
     emoji: {
 	    status: false,
 	    code: 403,
-	    message: '[!] Forbiden or Error, Emoji not Found',
+	    message: 'Acesso negado, ou não foi possível encontrar o emoji.',
 	    maintanied_by: `${creator}`
 	},
     instgram: {
 	    status: false,
 	    code: 403,
-	    message: '[!] Forbiden or Error, Username tidak wujud atau account private',
+	    message: 'Acesso negado, ou está conta é privado ou não existe.',
 	    maintanied_by: `${creator}`
    },
     register: {
 	    status: false,
 	    code: 403,
-	    message: '[!] Please Register First',
+	    message: 'Faça seu registro primeiro.',
   },
    verify: {
 	    status: false,
 	    code: 403,
-	    message: '[!] Please Verify Email',
+	    message: 'Verifique seu email primeiro.',
 }
 
 }

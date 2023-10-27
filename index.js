@@ -1,17 +1,3 @@
-//_______________________ ┏  Info  ┓ _______________________\\
-//
-//   Credit : AlipBot
-//
-//   Note
-//   Jangan Jual SC ini ,
-//   Jangan Buang Text ini,
-//   Siapa Mahu Upload Jangan Lupa Credit :),
-//   Siapa Tidak Letak Credit Akan Ambil Tindakan
-//
-//_______________________ ┏ Make By AlipBot ┓ _______________________\\
-
-//―――――――――――――――――――――――――――――――――――――――――― ┏  Modules ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
-
 require("./settings");
 const express = require("express");
 const app = express();
@@ -30,11 +16,11 @@ const bodyParser = require("body-parser");
 const User = require("./model/user");
 const dataweb = require("./model/DataWeb");
 
-//_______________________ ┏ Funtion ┓ _______________________\\
+//_______________________  Funções  _______________________\\
 
 async function resetapi() {
   await User.updateMany({}, { $set: { limitApikey: LimitApikey } });
-  console.log("RESET LIMIT DONE");
+  console.log("Os limites das apikeys foram resetados.");
 }
 
 async function ResetRequestToday() {
@@ -44,10 +30,10 @@ async function ResetRequestToday() {
       RequestToday: 0,
     }
   );
-  console.log("RESET Request Today DONE");
+  console.log("As solicitações foram resetadas.");
 }
 
-//_______________________ ┏ Code ┓ _______________________\\
+//_______________________  Códigos  _______________________\\
 
 (cors = require("cors")), (secure = require("ssl-express-www"));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
@@ -58,24 +44,24 @@ app.set("views", __dirname + "/view");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//_______________________ ┏ Connect Database ┓ _______________________\\
+//_______________________ Conectar database  _______________________\\
 
 mongoose.set("strictQuery", false);
 mongoose
   .connect(keymongodb, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(async () => {
-    console.log("Connected !");
+    console.log("Database conectada.");
     let limit = await dataweb.findOne();
     if (limit === null) {
       let obj = { RequestToday: 0 };
       await dataweb.create(obj);
-      console.log("DATA WEBSITE Sussces Create");
+      console.log("Database criada.");
     }
   });
 
-//_______________________ ┏ CronJob For Reset Limit ┓ _______________________\\
+//_______________________ ┏ Tempo para redefinir limite  ┓ _______________________\\
 
-// Reset Request Today Setiap sehari
+
 cron.schedule(
   "0 0 0 * * *",
   () => {
@@ -87,7 +73,7 @@ cron.schedule(
   }
 );
 
-//Reset All User Apikey Limit setiap sebulan
+
 cron.schedule(
   "0 0 1 * *",
   () => {
@@ -99,7 +85,7 @@ cron.schedule(
   }
 );
 
-//_______________________ ┏ Code ┓ _______________________\\
+//_______________________  Mais códigos  _______________________\\
 
 app.use(cookieParser("random"));
 app.use(
@@ -136,5 +122,3 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
-
-//_______________________ ┏ Make By AlipBot ┓ _______________________\\

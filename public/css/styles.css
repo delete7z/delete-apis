@@ -1,0 +1,93 @@
+body {
+	background-color: black;
+	color: white;
+	overflow: hidden;
+	user-select: none;
+	 -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+	text-align: center;
+}
+
+.anc h1 .txt{
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+.anc a {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+    animation: colors 2s linear infinite;
+}
+
+.anc {
+    text-align: center;
+    margin-top: 85%;
+}
+
+@keyframes colors {
+0% {
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+}
+25% {
+    border-top: 2px solid green;
+    border-right: 2px solid green;}
+50% {
+    border-top: 2px solid blue;
+    border-right: 2px solid blue;}
+75% {
+    border-top: 2px solid yellow;
+    border-right: 2px solid yellow;}
+100% {
+    border-top: 2px solid cyan;
+    border-right: 2px solid cyan;}
+}
+
+.img-src {
+  border-radius: 50%;
+  border: 2px solid #333;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  left: 170px;
+}
+
+.img p {
+	position: absolute;
+	color: white;
+	text-align: center;
+	font-size: 12px;
+	top: 170px;
+	margin-right: 10px;
+}
+
+.sociais {
+	text-align: center;
+	margin-top: 160px;
+	font-size: 35px;
+}
+
+.sociais a{
+	display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 16px;
+    margin: 0;
+    text-decoration: none;
+    
+}
+
+body p {
+	color: white;
+	font-size: 10px;
+	text-align: center;
+}

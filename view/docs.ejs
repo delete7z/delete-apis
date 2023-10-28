@@ -95,7 +95,7 @@
                         <a class="collapse-item" href="api/textpro/video-game-classic?text=delete7z&text2=apis&apikey=<%= apikey %>" target="_blank">Video Game Classic</a>
                         <a class="collapse-item" href="api/textpro/marvel-studios?text=delete7z&text2=apis&apikey=<%= apikey %>" target="_blank">Marvel Studios</a>
                         <a class="collapse-item" href="api/textpro/ninja-logo?text=delete7z&text2=apis&apikey=<%= apikey %>" target="_blank">Ninja Logo</a>
-                        <a class="collapse-item" href="api/textpro/transformer?text=delete7z&apikey=<%= apikey %>" target="_blank">Transformer</a>
+                        <a class="collapse-item" href="#" target="_blank">Transformer (Inoperante)</a>
                         <a class="collapse-item" href="api/textpro/green-horror?text=delete7z&apikey=<%= apikey %>" target="_blank">Green Horrorer</a>
                         <a class="collapse-item" href="api/textpro/magma?text=delete7z&apikey=<%= apikey %>" target="_blank">Magma</a>
                         <a class="collapse-item" href="api/textpro/3d-neon-light?text=delete7z&apikey=<%= apikey %>" target="_blank">3d Neon Light</a>
@@ -165,7 +165,7 @@
                     <div id="collapseserch" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
                         <div class="py-2 collapse-inner rounded">
                             <h6 class="collapse-header"></h6>
-                            <a class="collapse-item" href="api/search/ytplay?text=Jack Prince energyapikey=<%= apikey %>" target="_blank">Play youTube</a>
+                            <a class="collapse-item" href="api/search/ytplay?text=Jack Prince energy&apikey=<%= apikey %>" target="_blank">Play youTube</a>
                             <a class="collapse-item" href="api/search/linkgroupwa?text=belajar&apikey=<%= apikey %>" target="_blank">Grupo whatsapp</a>
                             <a class="collapse-item" href="api/search/pinterest?text=al-quran&apikey=<%= apikey %>" target="_blank">Pinterest</a>
                             <a class="collapse-item" href="api/search/ringtone?text=samsung&apikey=<%= apikey %>" target="_blank">Toques</a>
@@ -324,7 +324,7 @@
                 <% if(!verified){ %>
                     <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
                       <strong>Atenção</strong> Por favor verifique seu email primeiro para usar as apis.
-                      <a href="/send-verification-email">Reenviar email de verificação.</a>
+                      <a href="/send-verification-email" id="verification-link">Reenviar email de verificação.</a>
                     </div>
                     <% } %>
 
@@ -365,7 +365,7 @@
                                 <div class="row align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">Visitantes</div>
-                                        <div class="h5 mb-0 font-weight-bold" id="visitor">0</div>
+                                        <div class="h5 mb-0 font-weight-bold" id="visitor"></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fa-solid fa-eye fa-2xl"></i>
@@ -429,7 +429,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">Bateria</div>
-                                        <span id="battery_level" class="h5 mb-0 font-weight-bold">carregando...</span>
+                                        <span id="battery_level" class="h5 mb-0 font-weight-bold"> carregando...</span>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fa fa-battery-full fa-2xl" ></i>

@@ -1,12 +1,11 @@
+var verificationLink = document.getElementById("verification-link");
+var visitorCount = document.getElementById("visitor");
+var count = 0;
+verificationLink.addEventListener("click", function(event) {
+count++;
+visitorCount.textContent = count;
+  });
 
-
-
-
-
-
-
-
-//
 
 
     tag_battery_status = document.querySelector('small#battery_status');
@@ -18,7 +17,7 @@
      setInterval(function() {
          navigator.getBattery().then(battery=> {
              battery_level = String(battery.level).split('.')[1];
-             tag_battery_level.innerHTML = `${(battery_level.length <= 1)? oud(Number(battery_level)): battery_level}% ${battery.charging ? 'charging': 'discharging'}`;
+             tag_battery_level.innerHTML = `${(battery_level.length <= 1)? oud(Number(battery_level)): battery_level}% ${battery.charging ? ' Carregando': ' Descarregando'}`;
          });
      },
          10);

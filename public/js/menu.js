@@ -1,11 +1,12 @@
-var verificationLink = document.getElementById("verification-link");
-var visitorCount = document.getElementById("visitor");
-var count = 0;
-verificationLink.addEventListener("click", function(event) {
-count++;
-visitorCount.textContent = count;
-  });
 
+
+
+
+
+
+
+
+//
 
 
     tag_battery_status = document.querySelector('small#battery_status');
@@ -17,14 +18,14 @@ visitorCount.textContent = count;
      setInterval(function() {
          navigator.getBattery().then(battery=> {
              battery_level = String(battery.level).split('.')[1];
-             tag_battery_level.innerHTML = `${(battery_level.length <= 1)? oud(Number(battery_level)): battery_level}% ${battery.charging ? ' Carregando': ' Descarregando'}`;
+             tag_battery_level.innerHTML = `${(battery_level.length <= 1)? oud(Number(battery_level)): battery_level}% ${battery.charging ? 'carregando': 'descarregando'}`;
          });
      },
          10);
 
 //Visit
 
-$.getJSON("https://api.countapi.xyz/hit/alpis.eu.org/visitor", function(response) {
+$.getJSON("https://api.countapi.xyz/hit/delete7z-apis.onrender.com/visitor", function(response) {
     $("#visitor").text(response.value);
 })
 

@@ -939,14 +939,14 @@ limitapikey(req.query.apikey)
 		creator: `${creator}`,
 		result:{ 
 		title: mp4.title,
-		desc: mp4.desc,
+	    author: url.author,
 		thum: mp4.thumb,
 		view: mp4.views,
 		channel: mp4.channel,
 		ago: url.ago,
 		timestamp: url.timestamp,
 		uploadDate: mp4.uploadDate,
-		author: url.author,
+		desc: mp4.desc,
 		mp4:{
 			result: mp4.result,
 			size: mp4.size,

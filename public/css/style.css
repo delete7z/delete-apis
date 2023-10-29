@@ -17,6 +17,7 @@ body.dark-mode {
 .sticky-footer a {
     color: #fff
 }
-#findipurl {
-	color: red;
+
+.findiptitle {
+	margin-left: 50px;
 }

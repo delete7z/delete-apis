@@ -12,10 +12,10 @@
     <title>Documentação - Delete Apis</title>
     <script src="https://kit.fontawesome.com/5367cb78eb.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4341af83a9.js" crossorigin="anonymous"></script>
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/default.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../public/css/default.css" rel="stylesheet">
+    <link href="../public/css/style.css" rel="stylesheet">
 </head>
 
 <body id="page-top" class="dark-mode">
@@ -344,159 +344,38 @@
                           </div>
                           <% } %>
 
-                    <div class="container-fluid" id="container-wrapper">
-                        <div class="card h-50 mb-4">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-md-left font-weight-bold mb-2 text-primary">Rest api by delete</div>
-                                        <div class="text-sm-left mb-0 font-weight-bold">Olá <%= username %> Bem-vindo a minha rest apis</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-quote-right fa-2x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    <div class="row mb-3"> 
-
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card h-50">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Visitantes</div>
-                                        <div class="h5 mb-0 font-weight-bold" id="visitor"></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fa-solid fa-eye fa-2xl"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card h-50">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Solicitações Feitas</div>
-                                        <div class="h5 mb-0 font-weight-bold" ><%= RequestToday %></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fa-solid fa-paper-plane"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card h-50">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Solicitações restantes</div>
-                                        <div class="h5 mb-0 font-weight-bold" ><%= limit %></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fa-duotone fa-hourglass-half" ></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card h-50">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Sua apiKey</div>
-                                        <div class="h5 mb-0 font-weight-bold" ><%= apikey %></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fa-light fa-key" ></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card h-50">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Bateria</div>
-                                        <span id="battery_level" class="h5 mb-0 font-weight-bold"> Esperando...</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fa fa-battery-full fa-2xl" ></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card h-50">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Horário</div>
-                                        <div class="h5 mb-0 font-weight-bold" id="row-no-guttersalign-items-center">00:00:00</div>
-
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fa-solid fa-clock"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="findipurl"> <a href="find-ip.net" ></a></div>
-
-            <script defer src="https://api.find-ip.net/widget.js?width=220&bg=%23181818&border=%23181818&textcol=%23d3d5f3&language=0&system=0&"></script>
-
-
-                <div class="Box mt-4">
-                    <div class="Box-body p-4">
-                      <div class="d-flex flex-justify-between">
-                        <div class="text-mono text-small mb-3">
-                        </div>
-                      </div>
-
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            Chama ae
-                            <p>
-                                <a href="https://instagram.com/delete7z/" class="btn btn-primary btn-sm mr-2" target="_blank"><i class="fab fa-fw fa-instagram"></i>&nbsp;Instagram</a>
-                                <a href="https://wa.me/5511911225642" class="btn btn-primary btn-sm ml-2" target="_blank"><i class="fab fa-fw fa-whatsapp"></i>&nbsp;WhatsApp</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
+                 <div class="container">
+        <div class="bloco">
+            <p>Visitas</p>
+            <p>9999999</p>
+        </div>
+        <div class="bloco">
+            <p>Solicitações feitas</p>
+            <div class="req" ><%= RequestToday %></div>
             </div>
-             
-            <footer class="sticky-footer">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        Feito com <i class="fa fa-heart"></i> by
-                        <a href="https://wa.me/5511911225642" target="_blank" style="color: rgb(255, 234, 0);">delete 🇧🇷</a>
-                        </span>
-                    </div>
-                </div>
-            </footer>
-       
         </div>
     </div>
+    <div class="container">
+        <div class="bloco">
+            <p>Solicitações restantes</p>
+            <div class="limit" ><%= limit %></div>
+            </div>
+        <div class="bloco">
+    <p>Sua apikey</p>
+    <div class="h5 mb-0 font-weight-bold"><%= apikey %></div>
+</div>
+    </div>
+    <div class="container">
+        <div class="bloco">
+            <p>Sua bateria</p>
+            <p id="btr"></p>
+        </div>
+        <div class="bloco">
+            <p>Horário</p>
+            <p id="rlg"></p>
+        </div>
+    </div>
+                
 
     
     <a class="scroll-to-top rounded" href="#page-top">
@@ -504,11 +383,11 @@
     </a>
 
           
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/ruang-admin.min.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="../public/vendor/jquery/jquery.min.js"></script>
+    <script src="../public/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../public/js/ruang-admin.min.js"></script>
+    <script src="../public/js/menu.js"></script>
     
 
 </body>

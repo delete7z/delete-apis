@@ -21,3 +21,20 @@ body.dark-mode {
 #findipurl {
 	margin-left: 50px;
 }
+
+.container {
+            display: flex; /* Isso cria um container flexível */
+            align-items: center;
+            justify-content: center;
+            
+       }
+
+        .bloco {
+            width: 120px; /* Define a largura dos blocos para 50% para que eles fiquem lado a lado */
+            height: 100px;
+            border: 1px solid red; /* Adicione uma borda para visualização */
+            margin: 10px;
+            border-radius: 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #FF7E00, #FF2500);
+        }
